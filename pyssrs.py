@@ -5,8 +5,11 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     :copyright: (c) 2014 by Shaidullin Marat, Bodunkov Anton.
     :license: Apache License.
+    at https://github.com/stonebig/python-reporting-services/blob/master/LICENSE
+    this is modified (python-3 modernised code
 """
-from urllib import quote
+from urllib.parse  import quote
+# from urllib import quote
 
 import requests
 
@@ -88,8 +91,8 @@ class SSRSReport(object):
             http://your-reporting.com/ReportServer?/Report/Path&rs:FORMAT=EXCEL&item_id=666&contractor_id=9899&contractor_id=12775&contractor_id=3459
         """
         url_params = []
-        for key, value in params.iteritems():
-            if isinstance(value, (str, unicode)):
+        for key, value in params.items():
+            if isinstance(value, (str, )):
                 # Convert multi-value parameters
                 if divider and divider in value:
                     value = '&{0}='.format(key).join(value.split(divider))
