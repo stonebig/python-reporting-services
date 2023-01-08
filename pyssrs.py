@@ -5,7 +5,6 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     :copyright: (c) 2014 by Shaidullin Marat, Bodunkov Anton.
     :license: Apache License.
-
 """
 from urllib import quote
 
